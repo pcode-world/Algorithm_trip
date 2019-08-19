@@ -75,5 +75,8 @@ int insertLastList(Node *phead,elemtype insertElem);
 /* 16.从单链表中删除第pos个结点并返回它的值，若删除失败则停止程序运行 */
 /* 17.从单链表中删除值为x的第一个结点，若删除成功则返回1,否则返回0 */
 /* 18.交换2个元素的位置 */
+/* 链表反转 */
+
+Node *reverselist(Node *phead);
 
 #endif

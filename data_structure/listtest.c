@@ -38,7 +38,11 @@ int main()
     
     printlist(head);
 
-    listclear(head);
+    Node *newhead = reverselist(head);
+
+    printlist(newhead); 
+
+    listclear(newhead);
 
 
     return 0;

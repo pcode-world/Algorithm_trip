@@ -201,3 +201,32 @@ int insertLastList(Node *phead,elemtype insertElem)
  
     return 0;
 }
+
+Node *reverselist(Node *phead)
+{
+    Node *pnext,*pinsert;
+
+    if(NULL == phead || NULL == phead->next)
+    {
+        return phead;
+    }
+
+    pinsert = phead->next;
+    pnext = pinsert->next;
+    phead->next = NULL;
+
+    do
+    {
+        pinsert->next = phead;
+        phead = pinsert; 
+        pinsert = pnext;
+        pnext = pnext->next;
+    }while(pinsert->next != NULL);
+
+    /* last one */
+
+    pinsert->next = phead;
+    phead = pinsert;
+
+    return phead;
+}

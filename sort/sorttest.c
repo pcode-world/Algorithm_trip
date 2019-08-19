@@ -31,11 +31,15 @@ void printarr(typename *arr,size_t arrsize)
 
 int main()
 {
-    int arr[] = {1,8,19,45,32,4,6,72,96,74,111,0};
+    int arr[] = {1,8,19,45,32,4,6,72,96,74,111,0,8,8};
 
     //mergesort(arr,0,ARRELE(arr)-1);
-    bubblesort(arr,ARRELE(arr));
-
+    //bubblesort(arr,ARRELE(arr));
+    //selectsort(arr,ARRELE(arr));
+    //insertsort(arr,ARRELE(arr));
+    //Dutch_national_flag(arr,0,ARRELE(arr)-1,8);
+    quicksort(arr,0,ARRELE(arr)-1);
+    //heapsort(arr,ARRELE(arr));
     printarr(arr,ARRELE(arr));
 
     return 0;
